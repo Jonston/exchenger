@@ -126,12 +126,12 @@ class ExchangeRequestTest extends TestCase
         $userFrom = User::find(1);
 
         $request = ExchangeRequest::create($userFrom, 'purchase', 'stb', 10, 1.5);
-        $request->delete($request);
+        $request->delete();
 
         $this->assertEquals($request->userFrom->gnr, 100);
 
         $request = ExchangeRequest::create($userFrom, 'sale', 'stb', 10, 1.5);
-        $request->delete($request);
+        $request->delete();
 
         $this->assertEquals($request->userFrom->stb, 100);
     }

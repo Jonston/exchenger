@@ -13,6 +13,11 @@ ExchangeRequest::create(User::find(1), 'sale', 'stb', 10, .5);
 #### Approve request
 
 ```php
-$request = ExchangeRequest::find(1)->approve(User::find(2));
+ExchangeRequest::find(1)->approve(User::find(2));
 ```
 
+#### Delete request
+
+```php
+ExchangeRequest::find(1)->delete();
+```
