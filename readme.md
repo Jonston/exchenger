@@ -21,3 +21,13 @@ ExchangeRequest::find(1)->approve(User::find(2));
 ```php
 ExchangeRequest::find(1)->delete();
 ```
+
+#### Getting requests
+
+```php
+$userFrom = User::find(1);
+
+$userFrom->exchangeRequests(); //All user requests
+$userFrom->pendingExchangeRequests(); //Pending user requests
+$userFrom->approvedExchangeRequests(); //Approved user requests
+```
